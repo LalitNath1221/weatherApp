@@ -11,11 +11,11 @@ const TodaysHighlight = () => {
           <p className="text-xl font-semibold">Today's Highlight</p>
         </div>
         <div className="p-2">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="rounded-lg col-span-1 p-4 bg-white">
               <p className="text-md text-gray-700 font-medium">UV Index</p>
               <div className="py-4">
-                <p className="text-3xl font-semibold text-center">
+                <p className="text-2xl md:text-3xl font-semibold text-center">
                   {data?.days[0]?.uvindex}
                 </p>
               </div>
@@ -32,8 +32,8 @@ const TodaysHighlight = () => {
                 Wind Speed
               </p>
               <div className="py-4">
-                <p className="text-3xl font-semibold text-center">
-                  {data?.days[0]?.windspeed}
+                <p className="text-2xl md:text-3xl font-semibold text-center">
+                  {data?.days[0]?.windspeed}km/h
                 </p>
               </div>
               <div className=""></div>
@@ -60,25 +60,25 @@ const TodaysHighlight = () => {
                 Humidity
               </p>
               <div className="py-4">
-                <p className="text-3xl font-semibold text-center">
+                <p className="text-2xl md:text-3xl font-semibold text-center">
                   {data?.days[0]?.uvindex}%
                 </p>
               </div>
               <div className=""></div>
             </div>
             <div className="rounded-lg col-span-1 p-4 bg-white">
-              <p className="text-xl text-gray-700 font-medium capitalize">
+              <p className="text-md text-gray-700 font-medium capitalize">
                 Visibility
               </p>
               <div className="py-4">
-                <p className="text-3xl font-semibold text-center">
-                  {data?.days[0]?.visibility}kn
+                <p className="text-2xl md:text-3xl font-semibold text-center">
+                  {data?.days[0]?.visibility}km
                 </p>
               </div>
               <div className=""></div>
             </div>
             <div className="rounded-lg col-span-1 p-4 bg-white">
-              <p className="text-xl text-gray-700 font-medium capitalize">
+              <p className="text-md text-gray-700 font-medium capitalize">
                 Max & Min Temp.
               </p>
               <div className="py-4">
@@ -89,7 +89,7 @@ const TodaysHighlight = () => {
                   <p className="text-base leading-tight font-semibold">o</p>
                   <p className="text-base leading-none font-semibold">C</p>
                 </div>
-                <div className="flex">
+                <div className="flex pt-1">
                   <p className="text-lg md:text-xl font-semibold leading-none">
                     {data?.days[0]?.tempmin}
                   </p>

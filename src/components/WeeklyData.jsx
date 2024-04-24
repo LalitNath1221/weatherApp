@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 const WeeklyData = () => {
   const data = useSelector((state) => state.data);
-  const weeklyData = data?.days.slice(1, 7);
+  const weeklyData = data?.days?.slice(1, 7);
 
   const getDayName = (dateString) => {
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];;
@@ -25,7 +25,7 @@ const WeeklyData = () => {
         </div>
         <div className="pt-4">
           <div className="grid md:grid-cols-6 gap-2">
-            {weeklyData.map((item, index) => (
+            {weeklyData && weeklyData.map((item, index) => (
               <>
                 <div
                   key={index}
@@ -50,11 +50,11 @@ const WeeklyData = () => {
                   </div>
                 </div>
                 <div
-                  key={index}
+                  key={"1"+index}
                   className="md:hidden flex justify-between rounded-lg pt-1"
                 >
                   <p className="text-base font-semibold">{getDayName(item?.datetime)}</p>
-                  <div className="p-2 flex justify-center items-center">
+                  <div className="p-2 h-10 flex justify-center items-center">
                     <img
                       className="h-full"
                       src={weatherIcons[item?.icon]}
