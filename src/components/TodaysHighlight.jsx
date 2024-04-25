@@ -114,6 +114,9 @@ const TodaysHighlight = () => {
                   <div className="w-10">
                     <img src={weatherIcons["max-temp"]} alt="" />
                   </div>
+                  <p className="text-lg md:text-xl font-semibold leading-none">
+                      Max :
+                    </p>
                   <div className="flex">
                     <p className="text-lg md:text-xl font-semibold leading-none">
                       {data?.days[0]?.tempmax}
@@ -126,6 +129,9 @@ const TodaysHighlight = () => {
                   <div className="w-10">
                     <img src={weatherIcons["min-temp"]} alt="" />
                   </div>
+                  <p className="text-lg md:text-xl font-semibold leading-none">
+                      Min:
+                    </p>
                   <div className="flex">
                     <p className="text-lg md:text-xl font-semibold leading-none">
                       {data?.days[0]?.tempmin}
