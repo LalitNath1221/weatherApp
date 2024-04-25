@@ -84,7 +84,7 @@ const SideBar = () => {
               </div>
               <p className="text-lg text-center">
                 <span className="font-semibold">Humidity :</span>{" "}
-                <span>{data?.currentConditions?.humidity}</span>
+                <span>{data?.currentConditions?.humidity}%</span>
               </p>
             </div>
           </div>
