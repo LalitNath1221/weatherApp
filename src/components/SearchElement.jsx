@@ -6,7 +6,7 @@ import CitySuggession from './CitySuggession';
 import { fetchCityList } from '../apis/fetchCity';
 import fetchWeatherData from '../apis/featchData';
 import { useDispatch } from 'react-redux';
-import { setData } from '../Reducers/weatherData';
+import { setData, setLoading } from '../Reducers/weatherData';
 
 const SearchElement = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -53,10 +53,12 @@ const SearchElement = () => {
   };
 
   const fetchSearchedWeather = (location) => {
+    dispatch(setLoading({ isLoading: true }));
     ;(async ()=>{
       const res  = await fetchWeatherData(location);
     dispatch(setData({data:res}));
-    console.log(res)
+    dispatch(setLoading({ isLoading: false }));
+    //console.log(res)
     })()
   };
 

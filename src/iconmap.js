@@ -46,7 +46,7 @@ const weatherIcons = {
   'humidity':humidity,
   'min-temp':tempLow,
   'max-temp':tempHigh,
-  'visibility':visibility
+  'visibility':visibility,
 };
 
 export default weatherIcons;

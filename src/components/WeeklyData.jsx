@@ -2,17 +2,18 @@ import React from "react";
 import weatherIcons from "../iconmap";
 import { useSelector } from "react-redux";
 
+export const getDayName = (dateString) => {
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];;
+  const date = new Date(dateString); // Create a new Date object from the date string
+  const dayName = days[date.getDay()]; // Get the name of the day based on the day number
+  
+  return dayName; // Return the day name
+};
+
 const WeeklyData = () => {
-  const data = useSelector((state) => state.data);
+  const {data} = useSelector((state) => state);
   const weeklyData = data?.days?.slice(1, 7);
 
-  const getDayName = (dateString) => {
-    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];;
-    const date = new Date(dateString); // Create a new Date object from the date string
-    const dayName = days[date.getDay()]; // Get the name of the day based on the day number
-    
-    return dayName; // Return the day name
-  };
 
   return (
     <div className="w-full font-sans">

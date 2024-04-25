@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    data: null
+    data: null,
+    isLoading: false
 }
 
 export const weatherSlice = createSlice({
@@ -12,11 +13,14 @@ export const weatherSlice = createSlice({
             if(action.payload.data){
                 state.data = action.payload.data
             }
+        },
+        setLoading: (state, action) => {
+            state.isLoading = action.payload.isLoading;
         }
     }
 })
 
 
-export const {setData} = weatherSlice.actions
+export const {setData, setLoading} = weatherSlice.actions
 
 export default weatherSlice.reducer
