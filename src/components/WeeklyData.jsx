@@ -23,7 +23,7 @@ const WeeklyData = () => {
             <div className="block absolute bottom-0 left-0 w-full h-[3px] rounded-full bg-gray-500"></div>
           </div>
         </div>
-        <div className="pt-4">
+        <div className="pt-4 px-2">
           <div className="grid md:grid-cols-6 gap-2">
             {weeklyData && weeklyData.map((item, index) => (
               <>
@@ -32,9 +32,9 @@ const WeeklyData = () => {
                   className="hidden md:block bg-white rounded-lg p-2"
                 >
                   <p className="text-base font-semibold text-center">{getDayName(item?.datetime)}</p>
-                  <div className="p-2 flex justify-center items-center aspect-video">
+                  <div className="p-2 flex justify-center items-center aspect-square">
                     <img
-                      className="h-full"
+                      className="h-full w-full"
                       src={weatherIcons[item?.icon]}
                       alt=""
                     />
@@ -51,12 +51,12 @@ const WeeklyData = () => {
                 </div>
                 <div
                   key={"1"+index}
-                  className="md:hidden flex justify-between rounded-lg pt-1"
+                  className="md:hidden grid grid-cols-3 rounded-lg pt-1"
                 >
                   <p className="text-base font-semibold">{getDayName(item?.datetime)}</p>
-                  <div className="p-2 h-10 flex justify-center items-center">
+                  <div className="p-2 h-10 flex justify-center items-center ">
                     <img
-                      className="h-full"
+                      className="h-full drop-shadow-lg"
                       src={weatherIcons[item?.icon]}
                       alt=""
                     />

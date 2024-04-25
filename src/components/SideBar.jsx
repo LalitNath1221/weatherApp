@@ -2,15 +2,32 @@ import React from "react";
 import SearchElement from "./SearchElement";
 import { useSelector } from "react-redux";
 import weatherIcons from "../iconmap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 const SideBar = () => {
   const data = useSelector((state) => state.data);
+  const getLocation = (str) => {
+    const parts = str.split(',');
+  
+    // Check if both parts are valid numbers
+    if (parts.length === 2 && !isNaN(parts[0].trim()) && !isNaN(parts[1].trim())) {
+      return 'Current';
+    } else {
+      return str;
+    }
+  };
 
   return (
     <div className="p-4 font-sans">
       <div>
         <div>
           <SearchElement />
+        </div>
+        <div className="pt-5">
+          <div className="flex text-lg font-medium text-gray-700">
+          <FontAwesomeIcon icon={faLocationDot} className={'leading-none w-5 h-5 text-blue-600'}/><p className="">{getLocation(data?.resolvedAddress)}</p>
+          </div>
         </div>
         <div className="pt-5">
           <div className="p-2 flex justify-center items-center w-full aspect-video">

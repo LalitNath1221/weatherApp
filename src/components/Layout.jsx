@@ -34,7 +34,7 @@ const Layout = () => {
 
   
   return (
-    <div className='w-full md:h-screen bg-gradient p-8 '>
+    <div className='w-full md:h-screen bg-gradient p-2 md:p-8 '>
       {isLoading?(
         <div className='w-full h-full flex justify-center items-center'>
         <Spinner className="h-8 w-8" color="indigo" />

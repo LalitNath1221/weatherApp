@@ -15,7 +15,8 @@ async function fetchWeatherData(location = null){
                 url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${latitude},${longitude}?unitGroup=metric&key=${conf.weatherKey}&iconSet=icons2&contentType=json`;
             } catch (error) {
                 console.error('Error getting current location:', error);
-                return;
+                url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Delhi?unitGroup=metric&key=${conf.weatherKey}&iconSet=icons2&contentType=json`;
+                
             }
         } else {
             url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=${conf.weatherKey}&iconSet=icons2&contentType=json`;
