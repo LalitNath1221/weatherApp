@@ -8,7 +8,7 @@ import fetchWeatherData from '../apis/featchData'
 import { Spinner } from '@material-tailwind/react'
 
 const Layout = () => {
-  const { data, isLoading } = useSelector((state) => state);
+  const { data, isLoading } = useSelector((state) => state.weatherData);
   
   const dispatch = useDispatch()
   useEffect(() => {

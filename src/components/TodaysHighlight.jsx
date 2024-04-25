@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import weatherIcons from "../iconmap";
 
 const TodaysHighlight = () => {
-  const data = useSelector((state) => state.data);
+  const {data} = useSelector((state) => state.weatherData);
   return (
     <div className="py-4">
       <div>

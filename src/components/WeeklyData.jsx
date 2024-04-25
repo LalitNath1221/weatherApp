@@ -11,7 +11,7 @@ export const getDayName = (dateString) => {
 };
 
 const WeeklyData = () => {
-  const {data} = useSelector((state) => state);
+  const {data} = useSelector((state) => state.weatherData);
   const weeklyData = data?.days?.slice(1, 7);
 
 

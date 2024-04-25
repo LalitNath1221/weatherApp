@@ -7,7 +7,7 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { getDayName } from "./WeeklyData";
 
 const SideBar = () => {
-  const {data} = useSelector((state) => state);
+  const {data} = useSelector((state) => state.weatherData);
   const getLocation = (str="") => {
     const parts = str.split(",");
 
