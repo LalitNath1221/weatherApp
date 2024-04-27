@@ -15,7 +15,7 @@ const TodaysHighlight = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="rounded-lg col-span-1 p-4 bg-white">
               <p className="text-md text-gray-700 font-medium">UV Index</p>
-              <div className="py-4">
+              <div className="py-1">
                 <p className="text-xl md:text-3xl font-semibold text-center">
                   {data?.days[0]?.uvindex}
                 </p>
@@ -39,7 +39,7 @@ const TodaysHighlight = () => {
                   alt=""
                 />
               </div>
-              <div className="py-4 pt-1">
+              <div className="py-1 pt-1">
                 <p className="text-xl md:text-3xl font-semibold text-center">
                   {data?.days[0]?.windspeed}km/h
                 </p>
@@ -50,7 +50,7 @@ const TodaysHighlight = () => {
               <p className="text-md text-gray-700 font-medium capitalize">
                 Sunrise & Sunset
               </p>
-              <div className="py-4">
+              <div className="py-1">
                 <div className="flex items-center gap-2">
                   <div className="w-10">
                     <img src={weatherIcons["sun-set"]} alt="" />
@@ -80,7 +80,7 @@ const TodaysHighlight = () => {
                   alt=""
                 />
               </div>
-              <div className="py-4 pt-1">
+              <div className="py-1 pt-1">
                 <p className="text-xl md:text-3xl font-semibold text-center">
                   {data?.days[0]?.uvindex}%
                 </p>
@@ -98,7 +98,7 @@ const TodaysHighlight = () => {
                   alt=""
                 />
               </div>
-              <div className="py-4 pt-1">
+              <div className="py-1 pt-1">
                 <p className="text-xl md:text-3xl font-semibold text-center">
                   {data?.days[0]?.visibility}km
                 </p>
@@ -109,7 +109,7 @@ const TodaysHighlight = () => {
               <p className="text-md text-gray-700 font-medium capitalize">
                 Max & Min Temp.
               </p>
-              <div className="py-4">
+              <div className="py-1">
                 <div className="flex items-center gap-2">
                   <div className="w-10">
                     <img src={weatherIcons["max-temp"]} alt="" />

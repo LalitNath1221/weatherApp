@@ -33,15 +33,15 @@ const WeeklyData = () => {
                   className="hidden md:block bg-white rounded-lg p-2"
                 >
                   <p className="text-base font-semibold text-center">{getDayName(item?.datetime)}</p>
-                  <div className="p-2 flex justify-center items-center aspect-square">
+                  <div className="px-2 flex justify-center items-center aspect-video">
                     <img
-                      className="h-full w-full"
+                      className="h-full aspect-square mx-auto"
                       src={weatherIcons[item?.icon]}
                       alt=""
                     />
                   </div>
                   <div className="flex justify-center items-center">
-                    <div className="flex pt-4">
+                    <div className="flex pt-2">
                       <p className="text-lg md:text-xl font-semibold leading-none">
                       {item?.temp}
                       </p>

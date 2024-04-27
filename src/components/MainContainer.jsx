@@ -4,7 +4,7 @@ import WeeklyData from './WeeklyData'
 
 const MainContainer = () => {
   return (
-    <div className='p-4 md:p-8 bg-gray-200'>
+    <div className='p-4 md:p-8 md:py-6 bg-gray-200'>
         <div>
             <WeeklyData/>
         </div>

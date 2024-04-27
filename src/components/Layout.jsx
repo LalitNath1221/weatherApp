@@ -31,7 +31,7 @@ const Layout = () => {
         <Spinner className="h-8 w-8" color="indigo" />
         </div>
       ):(
-        <div className='w-full mx-auto sm:w-5/6 md:w-3/5 lg:w-full grid grid-cols-1 lg:grid-cols-12 gap-6'>
+        <div className='w-full h-full mx-auto sm:w-5/6 md:w-3/5 lg:w-full grid grid-cols-1 lg:grid-cols-12 gap-6'>
             <div className='lg:col-span-4 bg-white rounded-lg p-2'>
                 <SideBar/>
             </div>
